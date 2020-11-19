@@ -125,7 +125,7 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
       <?php if($value['top'] == 'y'): ?><img src="./views/images/top.png" align="top" title="首页置顶" /><?php endif; ?>
       <?php if($value['sortop'] == 'y'): ?><img src="./views/images/sortop.png" align="top" title="分类置顶" /><?php endif; ?>
       <?php if($value['attnum'] > 0): ?><img src="./views/images/att.gif" align="top" title="附件：<?php echo $value['attnum']; ?>" /><?php endif; ?>
-      <?php if($pid != 'draft' && $value['checked'] == 'n'): ?><sapn style="color:red;"> - 待审</sapn><?php endif; ?>
+      <?php if($pid != 'draft' && $value['checked'] == 'n'): ?><span style="color:red;"> - 待审</span><?php endif; ?>
       <span style="display:none; margin-left:8px;">
         <?php if($pid != 'draft' && ROLE == ROLE_ADMIN && $value['checked'] == 'n'): ?>
         <a href="./admin_log.php?action=operate_log&operate=check&gid=<?php echo $value['gid']?>&token=<?php echo LoginAuth::genToken(); ?>">审核</a> 
